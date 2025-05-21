@@ -1,0 +1,36 @@
+.footer{
+    backdrop-filter: blur(40px);
+        background: #bdcbe4;
+}
+.footer-container{
+    padding: 32px;
+}
+.footer-navigation{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    font-family: "Afacad", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #2e2f38;
+        margin-bottom: 8px;
+}
+.footer-text{
+    text-align: center;
+}
+@media only screen and (min-width: 1439px) {
+    .footer-container {
+            padding:24px, 32px;
+        }
+ .footer-navigation {
+font-size: 18px;
+ margin-bottom: 16px;
+}
+    
+.footer-text {
+    font-size: 18px;
+  }  
+}

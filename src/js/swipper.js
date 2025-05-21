@@ -9,28 +9,22 @@ const swiperConfigs = [
     paginationItemSelector: '.pagination-item',
   },
   {
-    selector: '.extra-swiper',
-    slideClass: 'extra-swiper-slide',
-    wrapperClass: 'extra-swiper-wrapper',
-    paginationItemSelector: '.extra-pagination-item',
+    selector: '.play-swiper',
+    slideClass: 'play-swiper-slide',
+    wrapperClass: 'play-swiper-wrapper',
+    paginationItemSelector: '.play-pagination-item',
   },
   {
-    selector: '.gallery-swiper',
-    slideClass: 'gallery-swiper-slide',
-    wrapperClass: 'gallery-swiper-wrapper',
-    paginationItemSelector: '.gallery-pagination-item',
+    selector: '.user-swiper',
+    slideClass: 'user-swiper-slide',
+    wrapperClass: 'user-swiper-wrapper',
+    paginationItemSelector: '.user-pagination-item',
   },
   {
-    selector: '.key-swiper',
-    slideClass: 'key-swiper-slide',
-    wrapperClass: 'key-swiper-wrapper',
-    paginationItemSelector: '.key-pagination-item',
-  },
-  {
-    selector: '.reviews-swiper',
-    slideClass: 'reviews-swiper-slide',
-    wrapperClass: 'reviews-swiper-wrapper',
-    paginationItemSelector: '.reviews-pagination-item',
+    selector: '.gameplay-swiper',
+    slideClass: 'gameplay-swiper-slide',
+    wrapperClass: 'gameplay-swiper-wrapper',
+    paginationItemSelector: '.gameplay-pagination-item',
   }
 ];
 
@@ -52,10 +46,10 @@ function initSwipers() {
       clearPagination(config.paginationItemSelector);
     }
 
-    const isProgressSwiper = ['.gallery-swiper', '.reviews-swiper'].includes(config.selector);
+    const isProgressSwiper = config.selector === '.user-swiper';
 
     if (isProgressSwiper) {
-      // Progress bar swipers (Gallery and Reviews)
+      // Progress bar swiper (user-swiper)
       if (screenWidth < 1439) {
         const swiper = new Swiper(id, {
           slidesPerView: 1,
@@ -84,7 +78,7 @@ function initSwipers() {
         });
       } else {
         const swiper = new Swiper(id, {
-          slidesPerView: config.selector === '.reviews-swiper' ? 2 : 3, // ← тут ключове
+          slidesPerView: 3,
           spaceBetween: 20,
           loop: true,
           slideClass: config.slideClass,
@@ -104,7 +98,7 @@ function initSwipers() {
         swiperInstances[id] = swiper;
       }
     } else {
-      // Other swipers (benefits, extra, key)
+      // Other swipers (advantages, play, gameplay)
       if (screenWidth < 1439) {
         const swiper = new Swiper(id, {
           slidesPerView: 1,
@@ -156,15 +150,14 @@ function clearPagination(paginationSelector) {
 }
 
 function updateProgressBar(swiper) {
-  let progressBar;
+  if (!swiper) return;
 
-  if (swiper.el.classList.contains('gallery-swiper')) {
+  let progressBar;
+  if (swiper.el.classList.contains('user-swiper')) {
     progressBar = document.querySelector('.pag_bar');
-  } else if (swiper.el.classList.contains('reviews-swiper')) {
-    progressBar = document.querySelector('.reviews-pag_bar');
   }
 
-  if (!progressBar || !swiper) return;
+  if (!progressBar) return;
 
   const total = swiper.slides.length - (swiper.loopedSlides * 0.1);
   const currentIndex = swiper.realIndex;
