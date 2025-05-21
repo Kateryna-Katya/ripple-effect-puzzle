@@ -1,0 +1,123 @@
+/* Hero */
+.hero-title{
+    font-family: "Afacad", sans-serif;
+        font-weight: 600;
+        font-size: 56px;
+            line-height: 1.5;
+        color: #2e2f38;
+        text-align:left;
+        margin-bottom: 40px;
+}
+.hero-span{
+    margin-left: 130px;
+}
+@media only screen and (min-width: 1439px) {
+    .hero-title{
+        margin-bottom: 0;
+    } 
+.hero-span {
+margin-left: 240px;
+ }
+.hero-img{
+    margin-left: 600px;
+    margin-top: -200px;
+}
+}
+/* Game Description */
+.game-section{
+    background-image: url("/img/game/back-mob.png");
+    background-repeat: no-repeat;
+    background-position: top 140px left 16px;
+    background-size: 360px 262px;
+}
+.game-title{
+    margin-bottom: 280px;
+}
+@media only screen and (min-width: 1439px) {
+.game-section {
+background-image: url("/img/game/back-desk.png");
+background-repeat: no-repeat;
+background-position: top 200px right 60px;
+background-size: 636px 397px;
+}    
+.game-title {
+margin-bottom: 100px;
+} 
+.game-text{
+    width: 632px;
+}
+}
+/* Advantages */
+.advantages-title{
+    margin-bottom: 40px;
+}
+.advantages-swiper-slide{
+    background: rgba(135, 169, 211, 0.15);
+    padding: 16px;
+    height: 109px;
+}
+.swiper-advantages-title{
+    font-family: "Afacad", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #707092;
+        margin-bottom: 8px;
+}
+.swiper-advantages-text{
+    font-size: 16px;
+}
+.advantages-swiper-wrapper{
+    margin-bottom: 32px;
+}
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 144px;
+    height: 21px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination-item {
+    border: 3px solid #d0d4e0;
+        width: 0;
+        height:21px;
+       transition: border 0.3s ease-in-out;
+}
+
+.pagination-item.active {
+    border: 3px solid #3e4e81;
+}
+@media only screen and (min-width: 1439px) {
+.advantages-title {
+margin-bottom: 120px; 
+ } 
+ .custom-pagination{
+    display: none;
+ }
+ .advantages-swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin-bottom: 0;
+ }
+ .advantages-swiper-slide{
+    padding: 24px;
+        width: 306px;
+        height: 207px;
+ }
+.swiper-advantages-title{
+    font-size: 24px;
+    margin-bottom: 16px;
+    height: 68px;
+}
+.swiper-advantages-text{
+    font-size: 18px;
+}
+}
