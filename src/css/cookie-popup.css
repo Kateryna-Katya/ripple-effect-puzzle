@@ -1,0 +1,113 @@
+.cookie-popup {
+    position: fixed;
+    bottom: 30px;
+    left: 48%;
+    transform: translateX(-48%);
+    padding: 16px 20px;
+    backdrop-filter: blur(60px);
+        background: #fff;
+    z-index: 1000;
+    width: 374px;
+    height: auto;
+    border-radius: 16px;
+    text-align: left;
+    display: none;
+}
+
+.cookie-class {
+    font-family: "Afacad", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #2e2f38;
+        width: 216px;
+}
+
+.popup-link {
+    text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: rgba(19, 177, 188, 0.4);
+}
+
+.cookie-buttons {
+    display: flex;
+    flex-direction: column;
+     gap: 16px;
+    width: 111px;
+        height: 104px;
+        font-family: "Afacad", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #2e2f38;
+            margin-left: 216px;
+            margin-top: -104px;
+}
+
+.btn-accept {
+    border-radius: 14px;
+        padding: 8px;
+        width: 111px;
+        height: 44px;
+        background: #2cdbe7;
+    box-sizing: content-box;
+    border: none;
+}
+
+.btn-decline {
+    border: 1px solid #2cdbe7;
+        border-radius: 14px;
+        padding: 8px;
+        width: 111px;
+        height: 44px;
+        box-sizing: content-box;
+    background-color: inherit;
+}
+
+@media screen and (min-width: 1439px) {
+    .cookie-popup {
+        padding: 20px 30px;
+        width: 1439px;
+        height: auto;
+    }
+
+    .popup-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 44px;
+    }
+
+    .cookie-class {
+        width: 421px;
+        font-size: 18px;
+    }
+
+    .cookie-buttons {
+        flex-direction: row;
+        gap: 16px;
+        width: 308px;
+        height: 51px;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 18px
+    }
+        .btn-accept {
+            border-radius: 12px;
+                padding: 12px;
+                width: 138px;
+                height: 51px;
+                box-sizing: border-box;
+            border: none;
+        }
+    
+        .btn-decline {
+                border-radius: 12px;
+                padding: 12px;
+                width: 154px;
+                height: 51px;
+            box-sizing: border-box;
+            background-color: inherit; 
+          }
+}

@@ -6,6 +6,12 @@ body{
     line-height: 1.4;
     color: #2e2f38;
 }
+.background{
+  background-image: url("/img/first-back-mob.png"), url("/img/second-back-mob.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain,contain;
+  background-position: top 990px center, bottom -90px center;
+}
 h2{
   font-family: "Afacad", sans-serif;
     font-weight: 500;
@@ -18,7 +24,12 @@ h2{
   body {
     font-size: 24px;
     }
-  
+   .background {
+  background-image: url("/img/first-back-desk.png"), url("/img/second-back-desk.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, 100% 717px;
+  background-position: top 1120px center, bottom -70px center;
+   }  
     h2 {
       font-size: 48px
  } 

@@ -7,6 +7,7 @@
         color: #2e2f38;
         text-align:left;
         margin-bottom: 40px;
+        margin-top: 40px;
 }
 .hero-span{
     margin-left: 130px;
@@ -14,12 +15,14 @@
 @media only screen and (min-width: 1439px) {
     .hero-title{
         margin-bottom: 0;
+        font-size: 80px;
+        margin-top: 50px;
     } 
 .hero-span {
 margin-left: 240px;
  }
 .hero-img{
-    margin-left: 600px;
+    margin-left: 700px;
     margin-top: -200px;
 }
 }
@@ -55,6 +58,11 @@ margin-bottom: 100px;
     background: rgba(135, 169, 211, 0.15);
     padding: 16px;
     height: 109px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+.advantages-swiper-slide:hover{
+    border: 1px solid #6a8dc7;   
+    background-color: rgba(135, 169, 211, 0.05);
 }
 .swiper-advantages-title{
     font-family: "Afacad", sans-serif;
@@ -132,6 +140,10 @@ margin-bottom: 120px;
     background: rgba(228, 235, 245, 0.4);
     height: 109px;
     padding: 16px;
+    transition: background-color 0.3s ease;
+}
+.gameplay-swiper-slide:hover{
+    background-color: rgba(228, 235, 245, 0.8);
 }
 .swiper-gameplay-title{
     font-family: "Afacad", sans-serif;
@@ -494,6 +506,11 @@ gap: 12px;
         padding: 16px;
             width: 343px;
             height: 115px;
+            transition: border 0.3s ease, background-color 0.3s ease;
+}
+.faq-item:hover{
+    border: 1px solid #6a8dc7;
+    background-color: rgba(135, 169, 211, 0.1);
 }
 .faq-item-title{
     font-family: "Afacad", sans-serif;
